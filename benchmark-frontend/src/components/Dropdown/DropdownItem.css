@@ -1,0 +1,47 @@
+@import "../../App.css";
+
+.DropdownItem_Name[aria-selected="true"] {
+  color: var(--blue-dark);
+  font-weight: 600;
+}
+
+.DropdownItem_Name[aria-disabled="true"] {
+  color: #cbd0d8;
+  font-weight: 400;
+  
+}
+.DropdownItem_SelectedIcon {
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  display: none;
+}
+.DropdownItem_Disabled {
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  display: none;
+}
+.DropdownItem_Name[aria-disabled="true"] .DropdownItem_Disabled:hover {
+  display: block;
+}
+
+.DropdownItem_Name[aria-selected="true"] .DropdownItem_SelectedIcon {
+  display: block;
+}
+
+.DropdownItem_Name[aria-selected="false"]:hover .DropdownItem_SelectedIcon-Trash {
+  display: block;
+}
+.DropdownItem_Overlay {
+  background-color: #fff;
+  padding: 10px 10px;
+  width: 260px;
+  box-shadow: 3px 3px 4px #A0A9BA80;
+}
+.DropdownItem_OverlayWrapper {
+  border: 2px solid #dee0ed;
+}
+.d-inline-block{
+  display: unset !important;
+}

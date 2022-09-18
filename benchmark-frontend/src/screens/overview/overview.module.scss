@@ -1,0 +1,156 @@
+.finalizeBtn {
+  padding: 15px 15px 13px;
+  border-radius: 4px;
+  background-color: var(--fill-secondary-mint);
+  border: none;
+  min-width: 168px;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: -0.23px;
+  text-align: center;
+  color: var(--fill-primary-blue);
+  &:disabled {
+    background-color: var(--gray);
+    color: var(--white);
+    cursor: not-allowed;
+  }
+  // &:hover {
+  //   background-color: var(--fill-secondary-mint);
+  //   color: var(--fill-primary-blue);
+  // }
+}
+
+.customModal {
+  position: absolute;
+  display: flex !important;
+  align-items: center;
+
+  .modalHeader {
+    display: block;
+    border-bottom: none;
+
+    .title {
+      font-size: 20px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.2;
+      letter-spacing: normal;
+      text-align: center;
+      color: var(--gunmetal);
+    }
+  }
+
+  .modalBody {
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--gunmetal);
+
+    .term {
+      margin-top: 18px;
+      .checkbox {
+        display: flex;
+        position: relative;
+        cursor: pointer;
+        user-select: none;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.31;
+        letter-spacing: -0.2px;
+        color: var(--gunmetal);
+
+        input:checked ~ span:after {
+          display: block;
+        }
+
+        input:checked ~ span {
+          background-color: var(--fill-primary-blue);
+          border: none;
+        }
+
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+        }
+
+        span {
+          position: relative;
+          height: 20px;
+          width: 20px;
+          border: 1px solid;
+          margin-right: 16px;
+
+          &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 8px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+
+  .modalFooter {
+    border-top: 0;
+    justify-content: center;
+
+    .confirmBtn {
+      padding: 8px 16px;
+      border-radius: 4px;
+      background-color: var(--blue);
+      font-size: 16px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: -0.23px;
+      text-align: center;
+      color: #ffffff;
+      border: 0;
+      outline: none;
+
+      &:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+      }
+    }
+
+    .cancelBtn {
+      padding: 8px 36px;
+      border-radius: 4px;
+      border: solid 1px #0074a4;
+      background: transparent;
+      outline: none;
+      font-size: 16px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: -0.23px;
+      text-align: center;
+      color: #0074a4;
+    }
+  }
+}

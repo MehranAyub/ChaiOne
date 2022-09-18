@@ -1,0 +1,22 @@
+.tab-container {
+  nav.nav-tabs {
+    border-bottom: solid 2px var(--pale-grey);
+    height: 38px;
+    box-shadow: none;
+    a {
+      font-size: 16px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1;
+      letter-spacing: 1px;
+      text-align: center;
+      color: var(--brown-grey);
+      &.active{
+        border: 0;
+        color: var(--fill-primary-blue);
+        border-bottom: 4px solid var(--fill-primary-blue);;
+      }
+    }
+  }
+}

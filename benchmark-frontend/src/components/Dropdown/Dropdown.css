@@ -1,0 +1,100 @@
+@import "../../App.css";
+
+.Dropdown {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.Dropdown_Arrow {
+  height: 24px;
+  width: 24px;
+}
+
+.Dropdown_Toggle[aria-expanded="true"] .Dropdown_Arrow {
+  transform: rotate(180deg);
+  
+}
+
+.Dropdown_Label {
+  color: var(--gunmetal);
+  font-size: 14px;
+  font-weight: 700;
+  font-family: var(--font);
+  margin-bottom: 10px;
+}
+
+.Dropdown_Header {
+  color: var(--gunmetal);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  font-family: var(--font);
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.Dropdown_HeaderIcon {
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+}
+
+.Dropdown_Search {
+  width: 100%;
+  height: 32px;
+  background-color: var(--pale-grey);
+  border-width: 0px;
+  padding: 8px 8px 8px 16px;
+  margin-bottom: 7px;
+  margin-top: 7px;
+}
+
+.Dropdown_Done {
+  margin-top: 55px;
+  justify-content: center !important;
+  color: var(--white) !important;
+  height: 32px;
+  margin-left: 16px;
+  margin-right: 16px;
+  font-size: 16px;
+  width: -webkit-fill-available;
+}
+
+.Dropdown_NewItemBtn {
+  background-color: var(--blue-dark);
+  width: fit-content;
+  padding: 5px 8px;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  font-family: proxima-nova, sans-serif;
+  margin: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  word-break: break-all;
+  white-space: normal;
+  display: none;
+}
+.Dropdown_required {
+  font-size: 12px;
+  font-family: proxima-nova, sans-serif;
+  color: #f74f10;
+  padding-left: 16px;
+  padding-top: 5px
+}
+.Dropdown_NewItemBtn:last-child {
+  display: block;
+}
+
+.UnSelected_DropBoxLabel {
+  color: var(--grey);
+  font-size: 16;
+  font-weight: 500;
+  line-height: 1.5;
+  font-family: proxima-nova, sans-serif
+}
+

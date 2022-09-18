@@ -1,0 +1,32 @@
+.DataTable_Dropdown-SubProcess .Dropdown_Toggle {
+ width: 190px
+}
+
+.DataTable_Dropdown-Factor .Dropdown_Toggle {
+  height: 24px;
+}
+
+.DataTable_modalHeader {
+  display: flex;
+  border-bottom: none;
+  justify-content: center;
+  align-items: center
+}
+.DataTable_modalbody {
+  border-bottom: none;
+  display: flex;
+  justify-content: center
+}
+.DataTable_modalFooter {
+  display: flex;
+  border-top: none;
+  justify-content: center
+}
+
+.table tr:first-child {
+  border-top: none;
+}
+.Datatable_scroll {
+  overflow-y: scroll;
+  max-height: 475px;
+}

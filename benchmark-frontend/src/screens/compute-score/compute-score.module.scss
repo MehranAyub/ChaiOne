@@ -1,0 +1,336 @@
+#computeScore {
+  .content {
+    background-color: var(--white);
+    margin-bottom: 32px;
+    font-family: proxima-nova, sans-serif;
+    margin: 0 auto;
+    position: relative;
+    top: -240px;
+    width: 100%;
+    max-width: 1344px;
+    padding-bottom: 16px;
+
+    .header {
+      padding: 0 32px;
+      padding-top: 32px;
+      h2 {
+        font-size: 24px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: var(--gunmetal);
+      }
+    }
+
+    .companyTab {
+      .title {
+        padding: 16px 0;
+        padding-left: 80px;
+        h3 {
+          font-size: 16px;
+          font-weight: 600;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1;
+          letter-spacing: normal;
+          color: var(--fill-grey);
+        }
+      }
+      
+      .collapseContainer {
+				border-bottom: solid 2px var(--pale-grey);
+				box-shadow: none;
+				
+				&:first-child {
+					border-top: solid 2px var(--pale-grey);
+				}
+
+				.collapseHeader {
+					padding: 16px 40px;
+					font-size: 16px;
+					font-weight: normal;
+					font-stretch: normal;
+					font-style: normal;
+					line-height: 1;
+					letter-spacing: normal;
+					color: var(--gunmetal);
+					span {
+						margin-left: 20px;
+					}
+				}
+      }
+			
+			.table {
+				margin-bottom: 0;
+
+				th {
+					padding: 10px 30px;
+					font-size: 16px;
+					font-weight: 600;
+					font-stretch: normal;
+					font-style: normal;
+					line-height: 1;
+					letter-spacing: normal;
+					color: var(--fill-grey);
+					&:first-child {
+						padding-left: 120px;
+					}
+				}
+
+				td {
+					font-size: 16px;
+					font-weight: normal;
+					font-stretch: normal;
+					font-style: normal;
+					line-height: 1;
+					letter-spacing: normal;
+					color: var(--gunmetal);
+					padding: 10px 30px;
+					width: 25%;
+					
+					&:first-child {
+						padding-left: 110px;
+					}
+
+					a, button {
+						padding: 8px 16px;
+						border-radius: 4px;
+						background-color: var(--blue);
+						border: none;
+						outline: none;
+						font-size: 16px;
+						font-weight: 600;
+						font-stretch: normal;
+						font-style: normal;
+						line-height: 1.5;
+						letter-spacing: -0.23px;
+						text-align: center;
+						color: #ffffff;
+						width: 168px;
+						display: block;
+						&.viewBtn {
+							width: 88px;
+						}
+					}
+				}
+			}
+					
+			.subTable {
+				&.company {
+					
+					th, td {
+						width: 25%;
+					}
+					
+					th:nth-child(3) {
+						padding-left: 30px !important;
+					}
+					
+					td:nth-child(3) {
+						padding-left: 30px !important;
+					}
+				}
+
+				th {
+					padding: 24px 0 !important;
+					border-top: 0;
+					min-width: 125px;
+					
+					&:first-child {
+						padding-left: 55px !important;
+					}
+					
+				}
+				td {
+					padding: 16px 0 !important;
+					
+					&:first-child {
+						padding-left: 55px !important;
+						padding-right: 100px !important;
+					}
+					
+					.good {
+						color: #009999;
+						font-weight: bold;
+					}
+					
+					.fair {
+						color: #53dfb3;
+						font-weight: bold;
+					}
+					
+					p{
+						font-size: 14px;
+  					color: var(--gunmetal);
+					}
+				
+				}
+			}
+					
+			.collapseTrigger {
+				display: flex;
+				margin-left: -30px;
+			}
+			
+			.active {
+				svg {
+					transform: rotate(90deg);
+					transition: 0.2s;
+				}
+			}
+    }
+  }
+	
+	.hoverRow {
+		&:hover {
+			background-color: var(--pale-grey);
+		}
+	}
+	
+	.noPadding {
+		padding: 0 !important;
+	}
+	
+	.subColumn {
+		padding: 0 60px !important;
+	}
+	
+	.ml20 {
+		margin-left: 20px;
+		display: inline-block;
+	}
+}
+
+.customModal {
+  position: absolute;
+  display: flex !important;
+  align-items: center;
+
+  .modalHeader {
+    display: block;
+    border-bottom: none;
+
+    .title {
+      font-size: 20px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.2;
+      letter-spacing: normal;
+      text-align: center;
+      color: var(--gunmetal);
+    }
+  }
+
+  .modalBody {
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--gunmetal);
+
+    .term {
+      margin-top: 18px;
+      .checkbox {
+          display: flex;
+          position: relative;
+          cursor: pointer;
+          user-select: none;
+          justify-content: center;
+          align-items: center;
+          font-size: 16px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.31;
+          letter-spacing: -0.2px;
+          color: var(--gunmetal);
+
+          input:checked ~ span:after {
+            display: block;
+          }
+
+          input:checked ~ span {
+            background-color: var(--fill-primary-blue);
+            border: none;
+          }
+
+          input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+          }
+
+          span {
+            position: relative;
+            height: 20px;
+            width: 20px;
+            border: 1px solid;
+            margin-right: 16px;
+
+            &:after {
+              content: "";
+              position: absolute;
+              display: none;
+              left: 8px;
+              top: 5px;
+              width: 5px;
+              height: 10px;
+              border: solid white;
+              border-width: 0 3px 3px 0;
+              transform: rotate(45deg);
+            }
+          }
+      }
+    }
+  }
+
+  .modalFooter {
+    border-top: 0;
+    justify-content: center;
+
+    .confirmBtn {
+      padding: 8px 16px;
+      border-radius: 4px;
+      background-color: var(--blue);
+      font-size: 16px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: -0.23px;
+      text-align: center;
+      color: #ffffff;
+      border: 0;
+      outline: none;
+      
+      &:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+      }
+    }
+
+    .cancelBtn {
+      padding: 8px 36px;
+      border-radius: 4px;
+      border: solid 1px #0074a4;
+      background: transparent;
+      outline: none;
+      font-size: 16px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: -0.23px;
+      text-align: center;
+      color: #0074a4;
+    }
+  }
+}
